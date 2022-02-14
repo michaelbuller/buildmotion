@@ -14,11 +14,7 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {
-      "@buildmotion/actions": ["libs/actions/src/index.ts"],
-      "@buildmotion/rules-engine": ["libs/rules-engine/src/index.ts"],
-      "@buildmotion/types": ["libs/types/src/index.ts"]
-    }
+    "paths": {}
   },
   "exclude": ["node_modules", "tmp"]
 }
