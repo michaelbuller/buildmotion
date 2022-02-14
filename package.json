@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx run-many --all --target=test --parallel=true --skip-nx-cache=true",
+    "lint": "nx run-many --target=lint --all --parallel=true --skip-nx-cache=true --fix"
   },
   "private": true,
   "dependencies": {
