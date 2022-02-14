@@ -1,6 +1,103 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "actions": {
+      "root": "libs/actions",
+      "sourceRoot": "libs/actions/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/actions",
+            "main": "libs/actions/src/index.ts",
+            "tsConfig": "libs/actions/tsconfig.lib.json",
+            "assets": ["libs/actions/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/actions/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/actions"],
+          "options": {
+            "jestConfig": "libs/actions/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "rules-engine": {
+      "root": "libs/rules-engine",
+      "sourceRoot": "libs/rules-engine/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/rules-engine",
+            "main": "libs/rules-engine/src/index.ts",
+            "tsConfig": "libs/rules-engine/tsconfig.lib.json",
+            "assets": ["libs/rules-engine/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/rules-engine/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rules-engine"],
+          "options": {
+            "jestConfig": "libs/rules-engine/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "types": {
+      "root": "libs/types",
+      "sourceRoot": "libs/types/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/workspace:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/types",
+            "main": "libs/types/src/index.ts",
+            "tsConfig": "libs/types/tsconfig.lib.json",
+            "assets": ["libs/types/*.md"]
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/types/**/*.ts"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/types"],
+          "options": {
+            "jestConfig": "libs/types/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }
