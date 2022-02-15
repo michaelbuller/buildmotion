@@ -33,6 +33,293 @@
         }
       }
     },
+    "common": {
+      "projectType": "library",
+      "root": "libs/common",
+      "sourceRoot": "libs/common/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/common"],
+          "options": {
+            "project": "libs/common/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/common/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/common/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/common"],
+          "options": {
+            "jestConfig": "libs/common/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/common/src/**/*.ts",
+              "libs/common/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "configuration": {
+      "projectType": "library",
+      "root": "libs/configuration",
+      "sourceRoot": "libs/configuration/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/configuration"],
+          "options": {
+            "project": "libs/configuration/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/configuration/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/configuration/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/configuration"],
+          "options": {
+            "jestConfig": "libs/configuration/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/configuration/src/**/*.ts",
+              "libs/configuration/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "error-handling": {
+      "projectType": "library",
+      "root": "libs/error-handling",
+      "sourceRoot": "libs/error-handling/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/error-handling"],
+          "options": {
+            "project": "libs/error-handling/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/error-handling/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/error-handling/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/error-handling"],
+          "options": {
+            "jestConfig": "libs/error-handling/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/error-handling/src/**/*.ts",
+              "libs/error-handling/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "foundation": {
+      "projectType": "library",
+      "root": "libs/foundation",
+      "sourceRoot": "libs/foundation/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/foundation"],
+          "options": {
+            "project": "libs/foundation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/foundation/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/foundation/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/foundation"],
+          "options": {
+            "jestConfig": "libs/foundation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/foundation/src/**/*.ts",
+              "libs/foundation/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "http-service": {
+      "projectType": "library",
+      "root": "libs/http-service",
+      "sourceRoot": "libs/http-service/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/http-service"],
+          "options": {
+            "project": "libs/http-service/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/http-service/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/http-service/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/http-service"],
+          "options": {
+            "jestConfig": "libs/http-service/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/http-service/src/**/*.ts",
+              "libs/http-service/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "logging": {
+      "projectType": "library",
+      "root": "libs/logging",
+      "sourceRoot": "libs/logging/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/logging"],
+          "options": {
+            "project": "libs/logging/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/logging/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/logging/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/logging"],
+          "options": {
+            "jestConfig": "libs/logging/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/logging/src/**/*.ts",
+              "libs/logging/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "notifications": {
+      "projectType": "library",
+      "root": "libs/notifications",
+      "sourceRoot": "libs/notifications/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/notifications"],
+          "options": {
+            "project": "libs/notifications/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/notifications/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/notifications/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/notifications"],
+          "options": {
+            "jestConfig": "libs/notifications/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/notifications/src/**/*.ts",
+              "libs/notifications/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "rules-engine": {
       "root": "libs/rules-engine",
       "sourceRoot": "libs/rules-engine/src",
@@ -96,9 +383,61 @@
           }
         }
       }
+    },
+    "validation": {
+      "projectType": "library",
+      "root": "libs/validation",
+      "sourceRoot": "libs/validation/src",
+      "prefix": "buildmotion",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/angular:package",
+          "outputs": ["dist/libs/validation"],
+          "options": {
+            "project": "libs/validation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/validation/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/validation/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/validation"],
+          "options": {
+            "jestConfig": "libs/validation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/validation/src/**/*.ts",
+              "libs/validation/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {}
   }
 }
