@@ -1,5 +1,6 @@
+import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
+import { IsTrue } from './IsTrue';
 import { CompositeRule } from './CompositeRule';
-import { IsNotNullOrUndefined, IsTrue } from './rules';
 
 /**
  * Use this rule to determine if the string value matches the specified

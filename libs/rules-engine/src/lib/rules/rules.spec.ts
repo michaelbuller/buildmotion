@@ -1,5 +1,6 @@
 import { AreEqual } from './AreEqual';
 import { AreNotEqual } from './AreNotEqual';
+import { DateIsGreaterThanComparisonDate } from './DateIsGreaterThanComparisonDate';
 import { GuidIsValid } from './GuidIsValid';
 import { IsFalse } from './IsFalse';
 import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
@@ -724,5 +725,43 @@ describe('CompositeRule', () => {
     rule = new StringIsNotNullEmptyRange('CompositeRule', 'This rule has composite rule members.', 'hello', 1, 10);
 
     expect(rule.hasRules()).toEqual(true);
+  });
+});
+
+describe('DateIsGreaterThanComparisonDate', () => {
+  let rule: DateIsGreaterThanComparisonDate;
+
+  it('should evaluate target as greater than comparison date', () => {
+    const now = new Date();
+    const comparisonDate = new Date();
+    comparisonDate.setFullYear(1969);
+    rule = new DateIsGreaterThanComparisonDate(
+      'DateIsGreaterThanComparisonDateRule',
+      `The target date [${now.toLocaleDateString()}] is not greater than the comparison date [${comparisonDate.toLocaleDateString()}].`,
+      now,
+      comparisonDate,
+      true
+    );
+
+    const result: RuleResult = rule.execute();
+
+    expect(result.isValid).toEqual(true);
+  });
+
+  it('should evaluate target as less than comparison date', () => {
+    const now = new Date();
+    const comparisonDate = new Date();
+    comparisonDate.setFullYear(now.getFullYear() + 1);
+    rule = new DateIsGreaterThanComparisonDate(
+      'DateIsGreaterThanComparisonDateRule',
+      `The target date [${now.toLocaleDateString()}] is not greater than the comparison date [${comparisonDate.toLocaleDateString()}].`,
+      now,
+      comparisonDate,
+      true
+    );
+
+    const result: RuleResult = rule.execute();
+
+    expect(result.isValid).toEqual(false);
   });
 });

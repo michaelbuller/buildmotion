@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Type } from "./Types";
 import { Primitive } from "./Primitive";
 import { IComparable } from "./IComparable";

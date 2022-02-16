@@ -1,7 +1,7 @@
 import { RulePolicy } from './RulePolicy';
 
 /**
- * Use this class as a base [extends] class for simple rules. A simple contains
+ * Use this class as a base [extends] class for simple rules. A simple rule contains
  * a single rule and target to evaluate.
  *
  * If you require a rule that will contain more than one rule, you should

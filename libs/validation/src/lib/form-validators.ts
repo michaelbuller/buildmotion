@@ -1,4 +1,4 @@
-import { AbstractControl, FormGroup, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { RuleConstants } from '@buildmotion/rules-engine';
 
 export function passwordValidator(): ValidatorFn {

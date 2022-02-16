@@ -17,6 +17,7 @@ export class IsNullOrUndefined extends SimpleRule {
    * @param target The target that the rules are evaluated against.
    * @param isDisplayable: Indicates if the rule violation is displayable. Default value is [false].
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   constructor(name: string, message: string, target: any, isDisplayable = false) {
     super(name, message, isDisplayable);
     this.target = target;

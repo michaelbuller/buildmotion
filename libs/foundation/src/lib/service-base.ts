@@ -12,12 +12,6 @@ import { ServiceMessage } from './models/ServiceMessage';
  * Use the [ServiceBase] to provide common behavior for Angular
  * services.
  */
-// @Injectable(
-//   {
-//     providedIn: 'any'
-//   }
-// )
-
 @Inject({})
 export class ServiceBase implements OnDestroy {
   accessToken = '';
@@ -36,7 +30,7 @@ export class ServiceBase implements OnDestroy {
     public serviceName: string,
     @Inject(LoggingService) public loggingService: ILoggingService,
     public serviceContext: ServiceContext) {
-    // this.loggingService.log(this.serviceName, Severity.Information, `Initializing ${this.serviceName} at ${Date.now()} with id: ${this.id}`);
+    this.loggingService.log(this.serviceName, Severity.Information, `Initializing ${this.serviceName} at ${Date.now()} with id: ${this.id}`);
   }
 
   /**

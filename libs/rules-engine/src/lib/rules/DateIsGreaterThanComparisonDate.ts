@@ -1,6 +1,6 @@
-﻿import { IsTrue } from '.';
-import { CompositeRule } from './CompositeRule';
+﻿import { CompositeRule } from './CompositeRule';
 import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
+import { IsTrue } from './IsTrue';
 import { StringIsValidDateString } from './StringIsValidDateString';
 
 /**
@@ -33,6 +33,7 @@ export class DateIsGreaterThanComparisonDate extends CompositeRule {
     isDisplayable = false) {
     super(name, message, isDisplayable);
     this.target = target;
+    this.comparisonDate = comparisonDate;
 
     this.configureRules();
   }
@@ -43,7 +44,7 @@ export class DateIsGreaterThanComparisonDate extends CompositeRule {
 
   configureRules() {
     this.rules.push(new IsNotNullOrUndefined('StringIsNotNull', 'The target cannot be null or undefined.', this.target));
-    this.rules.push(new IsNotNullOrUndefined('StringIsNotNull', 'The comparison date cannot be null or undefined.', this.target));
+    this.rules.push(new IsNotNullOrUndefined('StringIsNotNull', 'The comparison date cannot be null or undefined.', this.comparisonDate));
     if (this.target != null && this.comparisonDate != null) {
       // target and comparison date values are valid
       this.rules.push(new StringIsValidDateString('TargetDateStringIsValidDateString', `The target date value [${this.target.toString()}] is not valid.`, this.target, true));

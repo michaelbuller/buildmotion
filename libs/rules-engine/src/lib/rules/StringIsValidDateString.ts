@@ -1,4 +1,4 @@
-﻿import { IsTrue } from '.';
+﻿import { IsTrue } from './IsTrue';
 import { CompositeRule } from './CompositeRule';
 import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
 

@@ -13,7 +13,6 @@ export abstract class BusinessActionBase<T> extends ActionBase<T> {
   businessProvider!: BusinessProviderService;
   loggingService!: ILoggingService;
   actionName: string;
-  // public response: Observable<ApiResponse<T>>;
 
   constructor(actionName: string) {
     super();

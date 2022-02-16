@@ -80,12 +80,12 @@ export class DataDogWriterService extends LogWriter {
   public setup(): void {
     if (this.hasWriter && this.config && this.targetEntry) {
       try {
-        // FIXME: DO WE NEED TO SOMETHING HERE?
+        // FIXME: DO WE NEED TO SOMETHING HERE? Nope.
       } catch (error) {
-        const message = `${this.targetEntry.application}.DataDogWriter: ${{
-          ...error,
-        }}`;
-        console.error(message);
+        if (error && error instanceof Error) {
+          const message = `${this.targetEntry.application}.DataDogWriter: ${error?.message ?? ''}, ${error?.stack ?? error.stack}`;
+          console.error(message);
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Primitive } from './Primitive';
 import { RuleResult } from './RuleResult';
 import { SimpleRule } from './SimpleRule';

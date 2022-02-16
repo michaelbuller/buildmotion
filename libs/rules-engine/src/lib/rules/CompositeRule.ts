@@ -8,10 +8,10 @@ import { RuleResult } from './RuleResult';
  * A [RulePolicy] is an abstraction of the "composite" pattern
  *
  * A [CompositeRule] --> [RulePolicy]
- * - has a list of [RulePolicy] items; it is the [composite] of the "composte" pattern
+ * - has a list of [RulePolicy] items; it is the [composite] of the "composite" pattern
  *
  * A [SimpleRule]    --> [RulePolicy]
- * - does NOT have a list of rules; it is the [leaf] of the "composte" pattern.
+ * - does NOT have a list of rules; it is the [leaf] of the "composite" pattern.
  */
 export class CompositeRule extends RulePolicy {
   /**

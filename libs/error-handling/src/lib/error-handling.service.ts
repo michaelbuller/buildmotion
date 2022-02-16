@@ -70,7 +70,7 @@ export class ErrorHandlingService extends ErrorHandler {
         }
       } else {
         // B. HANDLE A GENERALIZED ERROR FROM THE APPLICATION/CLIENT;
-        const formattedError = `${error.name}; ${error.message}`;
+        const formattedError = `Error: ${error.name}; Message: ${error.message}; Stack: ${error.stack ?? 'Stack trace not available.'}`;
         this.loggingService.log(this.config.applicationName, Severity.Error, `${formattedError}`);
       }
     }
