@@ -5,15 +5,15 @@ export enum RenderType {
   /**
    * Use to indicate the rule rendering stops when a rule's evaluation is false - rule contains violations.
    */
-  ExitOnFirstFalseEvaluation,
+  ExitOnFirstFalseEvaluation = 'ExitOnFirstFalseEvaluation',
 
   /**
-   * Use to indicate the rule rendering stops when a rule's evalution is true (no rule violations).
+   * Use to indicate the rule rendering stops when a rule's evaluation is true (no rule violations).
    */
-  ExitOnFirstTrueEvaluation,
+  ExitOnFirstTrueEvaluation = 'ExitOnFirstTrueEvaluation',
 
   /**
    * Use to indicate that all rules of the rule set are rendered - returns all rule results.
    */
-  EvaluateAllRules,
+  EvaluateAllRules = 'EvaluateAllRules',
 }

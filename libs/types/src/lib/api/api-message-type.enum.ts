@@ -2,15 +2,15 @@ export enum ApiMessageType {
   /**
    * Use to indicate the message type is informational.
    */
-  Information = 1,
+  Information = 'Information',
 
   /**
    * Use to indicate the message type is warning.
    */
-  Warning = 2,
+  Warning = 'Warning',
 
   /**
    * Use to indicate the message type is error.
    */
-  Error = 3,
+  Error = 'Error',
 }

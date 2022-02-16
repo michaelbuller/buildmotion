@@ -5,15 +5,15 @@ export enum ActionResult {
   /**
    * Use to indicate that the action's result is success.
    */
-  Success = 1,
+  Success = 'Success',
 
   /**
    * Use to indicate that the action's result is failure.
    */
-  Fail = 2,
+  Fail = 'Fail',
 
   /**
    * Use to indicate that the action's result is unknown.
    */
-  Unknown = 3,
+  Unknown = 'Unknown',
 }

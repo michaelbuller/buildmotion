@@ -5,15 +5,15 @@ export enum Severity {
   /**
    * Indicates the rule violation is an [Exception].
    */
-  Exception,
+  Exception = 'Exception',
 
   /**
    * Indicates the rule violation is an [Warning].
    */
-  Warning,
+  Warning = 'Warning',
 
   /**
    * Indicates the rule violation is an [Information].
    */
-  Information,
+  Information = 'Information',
 }
