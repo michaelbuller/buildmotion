@@ -3,12 +3,15 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
     "build": "nx build",
-    "test": "nx run-many --all --target=test --parallel=true --skip-nx-cache=true",
-    "test:coverage": "nx run-many --all --target=test --coverage --parallel=true --skip-nx-cache=true",
+    "clean": "yarn run folders:clean && yarn run packages:clean",
+    "folders:clean": "rm -rf dist && rm -rf tmp && rm -rf coverage",
     "lint": "nx run-many --target=lint --all --parallel=true --skip-nx-cache=true --fix",
-    "postinstall": "ngcc --properties es2015 browser module main"
+    "packages:clean": "rm -rf node_modules && yarn install",
+    "postinstall": "ngcc --properties es2015 browser module main",
+    "start": "nx serve",
+    "test:coverage": "nx run-many --all --target=test --coverage --parallel=true --skip-nx-cache=true",
+    "test": "nx run-many --all --target=test --parallel=true --skip-nx-cache=true"
   },
   "private": true,
   "dependencies": {
