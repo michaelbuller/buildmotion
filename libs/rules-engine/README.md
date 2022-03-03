@@ -6,14 +6,12 @@ The rules engine can be used straight away with a set of off-the-shelf rules. Yo
 
 A rule is a simple evaluation of criteria against a target. All rules implemented in this rule engine follow the same execution workflow and provide the same consistent results
 
-
-## Angular Rules Engine
+## Rules Engine
 
 The Rules Engine is a Typescript based rule engine that allows applications to implement simple or sophisticated business rules as well as data validation. It contains a set of common rules ready for use; as well as a framework and set of classes for you to create any custom rule you need for your application. Apply business and validation rules for:
 
 - Angular applications and library projects
 - NestJS application and library projects
-
 
 ## Why use this rule engine?
 
@@ -43,7 +41,7 @@ The question should really be why are you *not* using a rule engine. Please cons
 
 Two core principles of good software design are [Separation of Concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns) and [Single Responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
 
-A business rule engine allows the application to have a good Separation of Concerns (SOR). The Angular Rules Engine allows you to:
+A business rule engine allows the application to have a good Separation of Concerns (SOR). The Rules Engine allows you to:
 
 + Quickly start using out-of-the-box rules that are already implemented.
 + Create custom rules that are either simple or composite.
@@ -51,14 +49,14 @@ A business rule engine allows the application to have a good Separation of Conce
 + Use a single ValidationContext to add rules, execute rules, and evaluate the rule results. 
 + Use a consistent pattern and mechanism to implement your business rules and data validation.
 
-# Getting Started :: New Angular 2 Application
+# Getting Started :: New Angular Application
 
-1. Create a new Angular 2 project using the Angular CLI
+1. Create a new Angular project using the Angular CLI
 2. Use NPM to install the package: `npm install --save @buildmotion/rules-engine`
 3. Run npm install. This will retrieve the package and add it to the node_modules folder. Any dependencies used by the package will also be downloaded and installed.
 
-## Getting Started :: Using the Angular-Rules-Engine
-There are only (4) steps to use the angular-rules-engine.
+## Getting Started :: Using the Rules-Engine
+There are only (4) steps to use the rules-engine.
 
 1. Initialize a new `ValidationContext`.
 2. Add rules to the context.
@@ -85,14 +83,14 @@ export class myClass {
 }
 ```
 
-The following shows the entire `ValidatonContext` class with its implementation details. It is straightforward, you make the calls in the following sequence:
+The following shows the entire `ValidationContext` class with its implementation details. It is straightforward, you make the calls in the following sequence:
 
 1. `addRule(..)`: Add rules that you want to evaluate.
 2. `renderRules()`: Renders all rules added to the ValidationContext.
 3. Determine the state of the validation by using either: `hasRuleViolations()` or `isValid()`. Each returns a boolean value indicating the status of the validation context. 
 
 ```js
-export class ValidatonContext implements IValidationContext {
+export class ValidationContext implements IValidationContext {
     state: ValidationContextState = ValidationContextState.NotEvaluated;
     results: Array<RuleResult> = new Array<RuleResult>();
     rules: Array<RulePolicy> = new Array<RulePolicy>();
@@ -112,7 +110,7 @@ export class ValidatonContext implements IValidationContext {
     /**
     * Use this method to execute the rules added to the [ValidationContext].
     */
-    renderRules(): ValidatonContextBase {
+    renderRules(): ValidationContextBase {
         this.results = new Array<RuleResult>();
         if (this.rules && this.rules.length < 1) {
             return this;
@@ -122,7 +120,7 @@ export class ValidatonContext implements IValidationContext {
     }
 
     /**
-    * Use to determin if the validation context has any rule violations.
+    * Use to determine if the validation context has any rule violations.
     */
     hasRuleViolations(): boolean {
         var hasViolations = false;
