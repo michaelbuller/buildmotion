@@ -13,7 +13,7 @@
             "outputPath": "dist/libs/actions",
             "main": "libs/actions/src/index.ts",
             "tsConfig": "libs/actions/tsconfig.lib.json",
-            "assets": ["libs/actions/*.md"]
+            "assets": ["libs/actions/*.md", "libs/actions/package.json"]
           }
         },
         "lint": {
