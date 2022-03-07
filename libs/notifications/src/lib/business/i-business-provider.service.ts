@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { ApiResponse } from '@buildmotion/types';
+import { ApiResponse } from '@buildmotion/core';
 
 export abstract class IBusinessProviderService {
   abstract validateNotification<T extends Notification>(message: Notification): Observable<ApiResponse<T>>;

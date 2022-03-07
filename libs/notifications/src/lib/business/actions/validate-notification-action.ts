@@ -1,5 +1,5 @@
 import { ActionResult } from '@buildmotion/actions';
-import { ApiResponse } from '@buildmotion/types';
+import { ApiResponse } from '@buildmotion/core';
 import { IsNotNullOrUndefined, StringIsNotNullEmptyRange } from '@buildmotion/rules-engine';
 import { of } from 'rxjs';
 

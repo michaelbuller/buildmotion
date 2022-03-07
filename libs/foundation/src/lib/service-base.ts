@@ -1,5 +1,5 @@
 import { Inject, OnDestroy } from '@angular/core';
-import { ApiResponse } from '@buildmotion/types';
+import { ApiResponse } from '@buildmotion/core';
 import { ILoggingService, LoggingService, Severity } from '@buildmotion/logging';
 import { Guid } from 'guid-typescript';
 import { Observable, of, Subscription } from 'rxjs';

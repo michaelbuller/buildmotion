@@ -7,7 +7,7 @@ import {
   HttpResponse
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ApiResponse } from '@buildmotion/types';
+import { ApiResponse } from '@buildmotion/core';
 import { Guid } from 'guid-typescript';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

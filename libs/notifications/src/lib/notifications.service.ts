@@ -1,7 +1,7 @@
 import { Injectable, Optional } from '@angular/core';
 import { ServiceBase, ServiceContext, ServiceResponse } from '@buildmotion/foundation';
 import { LoggingService, Severity } from '@buildmotion/logging';
-import { ApiMessage, ApiResponse } from "@buildmotion/types";
+import { ApiMessage, ApiResponse } from "@buildmotion/core";
 import { Observable, ReplaySubject, Subscription } from 'rxjs';
 import { BusinessProviderService } from './business/business-provider.service';
 import { NotificationOptions } from './models/notification-options.model';
