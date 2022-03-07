@@ -1,0 +1,12 @@
+echo 'building...libs'
+yarn run lib:types
+yarn run lib:rules
+yarn run lib:actions && yarn add ./dist/libs/actions
+yarn run lib:foundation
+# yarn run lib:common
+# yarn run lib:configuration
+# yarn run lib:logging
+# yarn run lib:error-handling
+# yarn run lib:http-service
+# yarn run lib:notifications
+# yarn run lib:validation validation
