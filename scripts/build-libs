@@ -4,14 +4,15 @@ rm -rf tmp
 rm -rf node_modules/.cache
 rm -rf node_modules/.ng-packagr-ngcc
 rm -rf node_modules/__ngcc_entry_points__.json
-yarn run lib:core
-yarn run lib:rules
-yarn run lib:actions
-yarn run lib:configuration
-yarn run lib:logging
-yarn run lib:foundation
-yarn run lib:common
-yarn run lib:error-handling
-yarn run lib:http-service
-yarn run lib:notifications
-yarn run lib:validation
+yarn run lib:core && cd libs/core && cp -R package.json ./../../dist/libs/core
+
+yarn run lib:rules-engine && cd libs/rules-engine && cp -R package.json ./../../dist/libs/rules-engine && cd ./../../
+yarn run lib:actions && cd libs/actions && cp -R package.json ./../../dist/libs/actions && cd ./../../
+yarn run lib:configuration && cd libs/configuration
+yarn run lib:logging && cd libs/logging
+yarn run lib:foundation && cd libs/foundation
+yarn run lib:common && cd libs/common
+yarn run lib:error-handling && cd libs/error-handling
+yarn run lib:http-service && cd libs/http-service
+yarn run lib:notifications && cd libs/notifications
+yarn run lib:validation && cd libs/validation
