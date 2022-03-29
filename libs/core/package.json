@@ -1,6 +1,6 @@
 {
   "name": "@buildmotion/core",
-  "version": "12.0.2",
+  "version": "12.2.0",
   "description": "Use @buildmotion/core to coordinate API calls between Angular and NestJS.",
   "repository": {
     "type": "git",

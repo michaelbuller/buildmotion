@@ -4,14 +4,15 @@ rm -rf tmp
 rm -rf node_modules/.cache
 rm -rf node_modules/.ng-packagr-ngcc
 rm -rf node_modules/__ngcc_entry_points__.json
-yarn run lib:core
-yarn run lib:rules-engine
-yarn run lib:actions
-yarn run lib:configuration 
-yarn run lib:logging 
-yarn run lib:foundation 
-yarn run lib:common 
-yarn run lib:error-handling
-yarn run lib:http-service
-yarn run lib:notifications 
-yarn run lib:validation 
+
+nx build core
+nx build rules-engine
+nx build actions
+nx build configuration 
+nx build logging 
+nx build foundation 
+nx build common 
+nx build error-handling
+nx build http-service
+nx build notifications 
+nx build validation 
