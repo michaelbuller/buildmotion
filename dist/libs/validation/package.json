@@ -1,0 +1,50 @@
+{
+  "name": "@buildmotion/validation",
+  "version": "12.2.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion",
+    "directory": "libs/validation"
+  },
+  "keywords": [
+    "actions",
+    "Angular validation",
+    "angular-rules-engine",
+    "Angular",
+    "angularlicio.us",
+    "angularlicious",
+    "build motion",
+    "buildmotion",
+    "buildmotion",
+    "business actions",
+    "custom validation",
+    "framework",
+    "JavaScript rules engine",
+    "JSON rules engine",
+    "Matt Vaughn",
+    "rules engine",
+    "rules-engine",
+    "TypeScript Rules Engine",
+    "validation rules",
+    "validators"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT",
+  "main": "bundles/buildmotion-validation.umd.js",
+  "typings": "buildmotion-validation.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@angular/forms": "^12.2.0",
+    "@buildmotion/rules-engine": "12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/buildmotion-validation.js",
+  "es2015": "fesm2015/buildmotion-validation.js",
+  "esm2015": "esm2015/buildmotion-validation.js",
+  "fesm2015": "fesm2015/buildmotion-validation.js",
+  "sideEffects": false
+}
