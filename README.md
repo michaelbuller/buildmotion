@@ -2,7 +2,7 @@
 
 Hi. I am Matt Vaughn the owner and founder of Build Motion. This repository contains a set of library projects for Angular and NodeJS enterprise applications. I spent most of my career developing backend APIs and business logic for different domains and industries. Most applications if not all require the use of several cross-cutting concerns. 
 
-> It seems like we attempt to solve all of the same problems over and over again. I initially created framework libraries for .NET/C# applications. With Angular and its dependency injection system, TypeScript with all of its wonderful chaarcteristics (e.g., OOP, strong types, design patterns, etc.), and Nx.dev with its library tooling (e.g., ng-packagr) you can create some amazing applications that use industry known/proven architectures, patterns, and designs. This is why I'm so focused on frontend development and architecture. 
+> It seems like we attempt to solve all of the same problems over and over again. I initially created framework libraries for .NET/C# applications. With Angular and its dependency injection system, TypeScript with all of its wonderful charcteristics (e.g., OOP, strong types, design patterns, etc.), and Nx.dev with its library tooling (e.g., ng-packagr) you can create some amazing applications that use industry known/proven architectures, patterns, and designs. This is why I'm so focused on frontend development and architecture. 
 >
 > For many years, it was not possible to achieve this kind of code reuse and quality.
 
