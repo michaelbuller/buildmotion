@@ -1,19 +1,23 @@
 {
   "name": "buildmotion",
-  "version": "0.0.1",
+  "version": "12.0.1",
   "license": "MIT",
   "scripts": {
     "build": "nx build",
-    "clean": "yarn run folders:clean && yarn run packages:clean",
-    "folders:clean": "rm -rf dist && rm -rf tmp && rm -rf coverage",
+    "clean": "yarn run clean:folders && yarn run clean:packages",
+    "clean:folders": "rm -rf dist && rm -rf tmp && rm -rf coverage",
+    "clean:packages": "rm -rf node_modules && npm install",
     "lint": "nx run-many --target=lint --all --parallel=true --skip-nx-cache=true --fix",
-    "packages:clean": "rm -rf node_modules && yarn install",
     "postinstall": "ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "test:coverage": "nx run-many --all --target=test --coverage --parallel=true --skip-nx-cache=true",
-    "test": "nx run-many --all --target=test --parallel=true --skip-nx-cache=true"
+    "test": "nx run-many --all --target=test --parallel=true --skip-nx-cache=true",
+    "build:pre": "chmod ug+x scripts/build-libs && chmod ug+x scripts/publish-packages",
+    "build:libs": "yarn run build:pre && scripts/build-libs",
+    "publish:libs": "chmod ug+x scripts/publish-packages && scripts/publish-packages",
+    "version:packages": "chmod ug+x scripts/version-packages && scripts/version-packages"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^12.2.0",
     "@angular/common": "^12.2.0",

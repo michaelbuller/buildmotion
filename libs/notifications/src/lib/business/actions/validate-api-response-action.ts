@@ -1,4 +1,4 @@
-import { ApiResponse } from '@buildmotion/types';
+import { ApiResponse } from '@buildmotion/core';
 import { BusinessActionBase } from './business-action-base';
 import { Severity } from '@buildmotion/logging';
 import { IsNotNullOrUndefined, StringIsNotNullEmptyRange, Range, IsTrue } from '@buildmotion/rules-engine';

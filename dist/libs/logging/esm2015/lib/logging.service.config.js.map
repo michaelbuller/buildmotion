@@ -1,0 +1,1 @@
+{"version":3,"file":"logging.service.config.js","sourceRoot":"","sources":["../../../../../libs/logging/src/lib/logging.service.config.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,oBAAoB;IAAjC;QACS,oBAAe,GAAG,uBAAuB,CAAC;IAEnD,CAAC;CAAA","sourcesContent":["export class LoggingServiceConfig {\n  public applicationName = 'APP_NAME_NOT_PROVIDED';\n  public version!: string;\n}\n"]}

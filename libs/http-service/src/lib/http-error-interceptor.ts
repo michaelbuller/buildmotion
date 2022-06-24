@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/types';
+import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/core';
 import {
   HttpErrorResponse,
   HttpEvent,

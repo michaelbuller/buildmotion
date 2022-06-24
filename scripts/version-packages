@@ -1,0 +1,12 @@
+echo 'update package...versions'
+cd libs/core && npm version minor && cd ../..
+cd libs/rules-engine && npm version minor && cd ../..
+cd libs/actions && npm version minor && cd ../..
+cd libs/configuration  && npm version minor && cd ../..
+cd libs/logging  && npm version minor && cd ../..
+cd libs/foundation  && npm version minor && cd ../..
+cd libs/common  && npm version minor && cd ../..
+cd libs/error-handling && npm version minor && cd ../..
+cd libs/http-service && npm version minor && cd ../..
+cd libs/notifications  && npm version minor && cd ../..
+cd libs/validation  && npm version minor && cd ../..
