@@ -1,0 +1,1 @@
+{"version":3,"file":"i-logging-config.js","sourceRoot":"","sources":["../../../../../../libs/configuration/src/lib/config/i-logging-config.ts"],"names":[],"mappings":"","sourcesContent":["export interface ILoggingConfig {\n  applicationName: string;\n  isProduction: boolean;\n}\n"]}

@@ -1,6 +1,37 @@
 {
   "name": "@buildmotion/error-handling",
-  "version": "0.0.1",
+  "version": "12.2.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion",
+    "directory": "libs/error-handling"
+  },
+  "keywords": [
+    "actions",
+    "angular-rules-engine",
+    "angular error handling",
+    "error handling",
+    "typescript error handling",
+    "Angular",
+    "angularlicio.us",
+    "angularlicious",
+    "build motion",
+    "buildmotion",
+    "buildmotion",
+    "business actions",
+    "framework",
+    "JSON rules engine",
+    "JavaScript rules engine",
+    "Matt Vaughn",
+    "rules engine",
+    "rules-engine",
+    "TypeScript Rules Engine"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0"

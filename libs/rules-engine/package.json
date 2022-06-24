@@ -1,4 +1,28 @@
 {
   "name": "@buildmotion/rules-engine",
-  "version": "0.0.1"
+  "version": "12.2.0",
+  "description": "A Rules engine for Angular and NestJS application. Share and reuse rules better.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion",
+    "directory": "https://github.com/buildmotion/buildmotion/tree/main/libs/rules-engine"
+  },
+  "keywords": [
+    "angular-rules-engine",
+    "Angular",
+    "angularlicio.us",
+    "angularlicious",
+    "build motion",
+    "buildmotion",
+    "buildmotion",
+    "framework",
+    "JSON rules engine",
+    "JavaScript rules engine",
+    "Matt Vaughn",
+    "rules engine",
+    "rules-engine",
+    "TypeScript Rules Engine"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT"
 }
