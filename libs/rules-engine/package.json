@@ -1,6 +1,6 @@
 {
   "name": "@buildmotion/rules-engine",
-  "version": "12.2.0",
+  "version": "13.0.1",,
   "description": "A Rules engine for Angular and NestJS application. Share and reuse rules better.",
   "repository": {
     "type": "git",
