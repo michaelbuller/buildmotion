@@ -1,4 +1,7 @@
-export var ApiMessageType;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiMessageType = void 0;
+var ApiMessageType;
 (function (ApiMessageType) {
     /**
      * Use to indicate the message type is informational.
@@ -12,5 +15,5 @@ export var ApiMessageType;
      * Use to indicate the message type is error.
      */
     ApiMessageType["Error"] = "Error";
-})(ApiMessageType || (ApiMessageType = {}));
+})(ApiMessageType = exports.ApiMessageType || (exports.ApiMessageType = {}));
 //# sourceMappingURL=api-message-type.enum.js.map

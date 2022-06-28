@@ -1,1 +1,0 @@
-{"version":3,"file":"i-error-handling-config.js","sourceRoot":"","sources":["../../../../../../libs/configuration/src/lib/config/i-error-handling-config.ts"],"names":[],"mappings":"","sourcesContent":["export interface IErrorHandingConfig {\n  applicationName: string;\n  includeDefaultErrorHandling: boolean;\n}\n"]}

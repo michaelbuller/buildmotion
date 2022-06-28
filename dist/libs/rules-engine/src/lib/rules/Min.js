@@ -1,11 +1,14 @@
-import { SimpleRule } from './SimpleRule';
-import { RuleResult } from './RuleResult';
-import { compare } from './core/Compare';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Min = void 0;
+const SimpleRule_1 = require("./SimpleRule");
+const RuleResult_1 = require("./RuleResult");
+const Compare_1 = require("./core/Compare");
 /**
  * Use the [Min] rule to determine if the target value is equal to or greater than the minimum
  * allowed value [comparison].
  */
-export class Min extends SimpleRule {
+class Min extends SimpleRule_1.SimpleRule {
     /**
      * The constructor for the [Min] rule.
      * @param name The name of the rule.
@@ -24,11 +27,12 @@ export class Min extends SimpleRule {
      * returns a [RuleResult] with the evaluated result and rule information.
      */
     render() {
-        const compareResult = compare(this.target, this.comparison, true);
-        if (compareResult === -1 /* Less */) {
+        const compareResult = (0, Compare_1.compare)(this.target, this.comparison, true);
+        if (compareResult === -1 /* CompareResult.Less */) {
             this.isValid = false; //must be equal to or greater than the comparison value;
         }
-        return new RuleResult(this, this.target);
+        return new RuleResult_1.RuleResult(this, this.target);
     }
 }
+exports.Min = Min;
 //# sourceMappingURL=Min.js.map

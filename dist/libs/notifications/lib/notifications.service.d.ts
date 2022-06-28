@@ -19,8 +19,8 @@ export declare class NotificationService extends ServiceBase {
     private apiMessagesSubject;
     private notificationsSubject$;
     private browserNotificationSubject$;
-    readonly apiMessages$: Observable<ApiMessage[]>;
-    readonly notifications$: Observable<Notification>;
+    readonly apiMessages$: Observable<ApiMessage[] | null>;
+    readonly notifications$: Observable<Notification | null>;
     readonly browserNotification$: Observable<boolean>;
     constructor(logger: LoggingService, serviceContext: ServiceContext, businessProvider: BusinessProviderService);
     /**

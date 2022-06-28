@@ -1,1 +1,0 @@
-{"version":3,"file":"i-api-config.js","sourceRoot":"","sources":["../../../../../../libs/configuration/src/lib/config/i-api-config.ts"],"names":[],"mappings":"","sourcesContent":["\nexport interface IAPIConfig {\n  apiURL: string,\n  baseUrl: string;\n  csrf: string;\n  health: string;\n  version: string;\n}\n"]}

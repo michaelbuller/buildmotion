@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../libs/error-handling/src/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,mBAAmB,EAAE,MAAM,6BAA6B,CAAC;AAClE,OAAO,EAAE,oBAAoB,EAAE,MAAM,8BAA8B,CAAC","sourcesContent":["export { ErrorHandlingModule } from './lib/error-handling.module';\nexport { ErrorHandlingService } from './lib/error-handling.service';\n"]}

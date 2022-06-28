@@ -1,46 +1,33 @@
 {
   "name": "@buildmotion/common",
-  "version": "12.2.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/common"
-  },
-  "keywords": [
-    "actions",
-    "angular-rules-engine",
-    "Angular",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "framework",
-    "JSON rules engine",
-    "JavaScript rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "main": "bundles/buildmotion-common.umd.js",
-  "typings": "buildmotion-common.d.ts",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0",
-    "rxjs": "~6.6.0",
-    "@angular/forms": "^12.2.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "rxjs": "~7.4.0",
+    "@angular/forms": "~14.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "module": "fesm2015/buildmotion-common.js",
-  "es2015": "fesm2015/buildmotion-common.js",
-  "esm2015": "esm2015/buildmotion-common.js",
-  "fesm2015": "fesm2015/buildmotion-common.js",
+  "module": "fesm2015/buildmotion-common.mjs",
+  "es2020": "fesm2020/buildmotion-common.mjs",
+  "esm2020": "esm2020/buildmotion-common.mjs",
+  "fesm2020": "fesm2020/buildmotion-common.mjs",
+  "fesm2015": "fesm2015/buildmotion-common.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/buildmotion-common.mjs",
+      "es2020": "./fesm2020/buildmotion-common.mjs",
+      "es2015": "./fesm2015/buildmotion-common.mjs",
+      "node": "./fesm2015/buildmotion-common.mjs",
+      "default": "./fesm2020/buildmotion-common.mjs"
+    }
+  },
   "sideEffects": false
 }

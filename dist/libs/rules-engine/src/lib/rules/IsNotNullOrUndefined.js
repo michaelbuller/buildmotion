@@ -1,9 +1,12 @@
-import { SimpleRule } from './SimpleRule';
-import { RuleResult } from './RuleResult';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsNotNullOrUndefined = void 0;
+const SimpleRule_1 = require("./SimpleRule");
+const RuleResult_1 = require("./RuleResult");
 /**
  * Use to determine if the target is NOT [null] or [undefined].
  */
-export class IsNotNullOrUndefined extends SimpleRule {
+class IsNotNullOrUndefined extends SimpleRule_1.SimpleRule {
     /**
      * The constructor for the [IsNotNullOrUndefined] rule.
      * @param name The name of the rule.
@@ -24,7 +27,8 @@ export class IsNotNullOrUndefined extends SimpleRule {
         if (this.target == null || this.target === null || typeof this.target === 'undefined') {
             this.isValid = false;
         }
-        return new RuleResult(this, this.target);
+        return new RuleResult_1.RuleResult(this, this.target);
     }
 }
+exports.IsNotNullOrUndefined = IsNotNullOrUndefined;
 //# sourceMappingURL=IsNotNullOrUndefined.js.map

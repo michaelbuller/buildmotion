@@ -27,7 +27,7 @@ import { ServiceContext } from './models/ServiceContext';
 export declare class ActionBase<T> extends Action {
     serviceContext: ServiceContext;
     response: Observable<T> | any;
-    loggingService?: ILoggingService;
+    loggingService: ILoggingService;
     actionName: string;
     constructor(actionName?: string);
     start(): void;

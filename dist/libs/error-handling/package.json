@@ -1,54 +1,33 @@
 {
   "name": "@buildmotion/error-handling",
-  "version": "12.2.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/error-handling"
-  },
-  "keywords": [
-    "actions",
-    "angular-rules-engine",
-    "angular error handling",
-    "error handling",
-    "typescript error handling",
-    "Angular",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "framework",
-    "JSON rules engine",
-    "JavaScript rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "main": "bundles/buildmotion-error-handling.umd.js",
-  "typings": "buildmotion-error-handling.d.ts",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0",
-    "@buildmotion/configuration": "12.2.0",
-    "rxjs": "~6.6.0",
-    "@buildmotion/logging": "12.2.0",
-    "@datadog/browser-logs": "^4.3.0",
-    "@datadog/browser-rum": "^4.3.0",
-    "@buildmotion/rules-engine": "12.2.0",
-    "guid-typescript": "^1.0.9"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@buildmotion/configuration": "14.0.1",
+    "@buildmotion/logging": "14.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "module": "fesm2015/buildmotion-error-handling.js",
-  "es2015": "fesm2015/buildmotion-error-handling.js",
-  "esm2015": "esm2015/buildmotion-error-handling.js",
-  "fesm2015": "fesm2015/buildmotion-error-handling.js",
+  "module": "fesm2015/buildmotion-error-handling.mjs",
+  "es2020": "fesm2020/buildmotion-error-handling.mjs",
+  "esm2020": "esm2020/buildmotion-error-handling.mjs",
+  "fesm2020": "fesm2020/buildmotion-error-handling.mjs",
+  "fesm2015": "fesm2015/buildmotion-error-handling.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/buildmotion-error-handling.mjs",
+      "es2020": "./fesm2020/buildmotion-error-handling.mjs",
+      "es2015": "./fesm2015/buildmotion-error-handling.mjs",
+      "node": "./fesm2015/buildmotion-error-handling.mjs",
+      "default": "./fesm2020/buildmotion-error-handling.mjs"
+    }
+  },
   "sideEffects": false
 }

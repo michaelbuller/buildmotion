@@ -1,4 +1,7 @@
-import { ValidationContextState } from './ValidationContextState';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ValidationContext = void 0;
+const ValidationContextState_1 = require("./ValidationContextState");
 /**
  * Use this class to create a new Validation Context for your application. With this
  * context, you can add rules and evaluate the rules.
@@ -6,7 +9,7 @@ import { ValidationContextState } from './ValidationContextState';
  * After the rules are evaluated, you can use the Validation Context to determine if there are
  * any rule violations.
  */
-export class ValidationContext {
+class ValidationContext {
     /**
      * The constructor for the base validation context.
      */
@@ -14,7 +17,7 @@ export class ValidationContext {
         /**
          * Use to indicate the state of the validation context.
          */
-        this.state = ValidationContextState.NotEvaluated;
+        this.state = ValidationContextState_1.ValidationContextState.NotEvaluated;
         /**
          * A list of results for all evaluated rules that belong to the validation context.
          */
@@ -90,4 +93,5 @@ export class ValidationContext {
         return isRuleValid;
     }
 }
+exports.ValidationContext = ValidationContext;
 //# sourceMappingURL=ValidationContext.js.map

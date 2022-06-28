@@ -31,8 +31,8 @@ import { ServiceMessage } from './models/ServiceMessage';
 export class ActionBase<T> extends Action {
   serviceContext: ServiceContext = new ServiceContext();
   response: Observable<T> | any = this.createUnknownResponse();
-  loggingService?: ILoggingService;
-  actionName!: string;
+  loggingService!: ILoggingService;
+  override actionName!: string;
 
   constructor(actionName?: string) {
     super();
@@ -76,7 +76,7 @@ export class ActionBase<T> extends Action {
    * This is a required implementation if you want to render/execute the rules that
    * are associated to the specified action.
    */
-  validateAction(): ValidationContext {
+  override validateAction(): ValidationContext {
     return this.validationContext.renderRules();
   }
 

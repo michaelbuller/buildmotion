@@ -1,11 +1,14 @@
-import { CompositeRule } from './CompositeRule';
-import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
-import { IsTrue } from './IsTrue';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StringIsRegExMatch = void 0;
+const CompositeRule_1 = require("./CompositeRule");
+const IsNotNullOrUndefined_1 = require("./IsNotNullOrUndefined");
+const IsTrue_1 = require("./IsTrue");
 /**
  * Use this rule to determine if the string value matches the specified
  * regular expression.
  */
-export class StringIsRegExMatch extends CompositeRule {
+class StringIsRegExMatch extends CompositeRule_1.CompositeRule {
     /**
      * The constructor for the [IsNotNullOrUndefined] rule.
      * @param name The name of the rule.
@@ -25,10 +28,11 @@ export class StringIsRegExMatch extends CompositeRule {
     configureRules() {
         const doNotShowRuleViolation = false;
         // determine if the target is a valid object;
-        this.rules.push(new IsNotNullOrUndefined('StringIsNotNullOrUndefined', 'The target value is null or undefined.', this.target, doNotShowRuleViolation));
+        this.rules.push(new IsNotNullOrUndefined_1.IsNotNullOrUndefined('StringIsNotNullOrUndefined', 'The target value is null or undefined.', this.target, doNotShowRuleViolation));
         if (this.target) {
-            this.rules.push(new IsTrue('StringIsRegExpMatch', 'The target value is not a match.', this.expression.test(this.target), doNotShowRuleViolation));
+            this.rules.push(new IsTrue_1.IsTrue('StringIsRegExpMatch', 'The target value is not a match.', this.expression.test(this.target), doNotShowRuleViolation));
         }
     }
 }
+exports.StringIsRegExMatch = StringIsRegExMatch;
 //# sourceMappingURL=StringIsRegExMatch.js.map

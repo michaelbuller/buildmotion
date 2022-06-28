@@ -194,11 +194,11 @@ export class ComponentBase implements OnDestroy {
   public routeTo(routeName: string) {
     try {
       this.router.navigate([routeName]);
-    } catch (error) {
+    } catch (error: any) {
       this.loggingService.log(
         this.componentName,
         Severity.Error,
-        `Error while attempting to navigate to [${routeName}] route from ${this.componentName}. Error: ${error.toString()}`
+        `Error while attempting to navigate to [${routeName}] route from ${this.componentName}. Error: ${error.message.toString()}`
       );
     }
   }
