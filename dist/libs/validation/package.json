@@ -1,50 +1,33 @@
 {
   "name": "@buildmotion/validation",
-  "version": "12.2.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/validation"
-  },
-  "keywords": [
-    "actions",
-    "Angular validation",
-    "angular-rules-engine",
-    "Angular",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "custom validation",
-    "framework",
-    "JavaScript rules engine",
-    "JSON rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine",
-    "validation rules",
-    "validators"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "main": "bundles/buildmotion-validation.umd.js",
-  "typings": "buildmotion-validation.d.ts",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0",
-    "@angular/forms": "^12.2.0",
-    "@buildmotion/rules-engine": "12.2.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "~14.0.0",
+    "@buildmotion/rules-engine": "14.0.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "module": "fesm2015/buildmotion-validation.js",
-  "es2015": "fesm2015/buildmotion-validation.js",
-  "esm2015": "esm2015/buildmotion-validation.js",
-  "fesm2015": "fesm2015/buildmotion-validation.js",
+  "module": "fesm2015/buildmotion-validation.mjs",
+  "es2020": "fesm2020/buildmotion-validation.mjs",
+  "esm2020": "esm2020/buildmotion-validation.mjs",
+  "fesm2020": "fesm2020/buildmotion-validation.mjs",
+  "fesm2015": "fesm2015/buildmotion-validation.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/buildmotion-validation.mjs",
+      "es2020": "./fesm2020/buildmotion-validation.mjs",
+      "es2015": "./fesm2015/buildmotion-validation.mjs",
+      "node": "./fesm2015/buildmotion-validation.mjs",
+      "default": "./fesm2020/buildmotion-validation.mjs"
+    }
+  },
   "sideEffects": false
 }

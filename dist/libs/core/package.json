@@ -1,36 +1,10 @@
 {
   "name": "@buildmotion/core",
-  "version": "12.2.0",
-  "description": "Use @buildmotion/core to coordinate API calls between Angular and NestJS.",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/core"
-  },
-  "keywords": [
-    "actions",
-    "angular-rules-engine",
-    "Angular",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "framework",
-    "JSON rules engine",
-    "JavaScript rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine",
-    "API response"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
+  "version": "14.0.1",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
+  "dependencies": {},
   "peerDependencies": {
-    "@buildmotion/rules-engine": "0.0.1"
+    "tslib": "^2.3.0"
   }
 }

@@ -46,7 +46,7 @@ export class ErrorHandlingService extends ErrorHandler {
    *
    * @param error
    */
-  handleError(error: Error | HttpErrorResponse): void {
+  override handleError(error: Error | HttpErrorResponse): void {
     if (this.config.includeDefaultErrorHandling) {
       // use the [super] call to keep default error handling functionality --> console;
       super.handleError(error);

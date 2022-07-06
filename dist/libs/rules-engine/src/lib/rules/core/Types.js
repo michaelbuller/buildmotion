@@ -1,15 +1,18 @@
+"use strict";
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable @typescript-eslint/prefer-namespace-keyword */
 /* eslint-disable @typescript-eslint/no-namespace */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Type = exports.TypeInfo = void 0;
 const VOID0 = void (0), _BOOLEAN = typeof true, _NUMBER = typeof 0, _STRING = typeof "", _SYMBOL = "symbol", _OBJECT = typeof {}, _UNDEFINED = typeof VOID0, _FUNCTION = typeof function () { }, LENGTH = "length";
 // Only used for primitives.
 const typeInfoRegistry = {};
 /**
  * Exposes easy access to type information including inquiring about members.
  */
-export class TypeInfo {
+class TypeInfo {
     constructor(target, onBeforeFreeze) {
         this.isBoolean = false;
         this.isNumber = false;
@@ -120,9 +123,11 @@ export class TypeInfo {
         return this.target instanceof type ? this.target : null;
     }
 }
-export function Type(target) {
+exports.TypeInfo = TypeInfo;
+function Type(target) {
     return new TypeInfo(target);
 }
+exports.Type = Type;
 (function (Type) {
     /**
      * typeof true
@@ -353,7 +358,7 @@ export function Type(target) {
             || !Type.isFunction(instance) && hasMember(instance, LENGTH);
     }
     Type.isArrayLike = isArrayLike;
-})(Type || (Type = {}));
+})(Type = exports.Type || (exports.Type = {}));
 Object.freeze(Type);
-export default Type;
+exports.default = Type;
 //# sourceMappingURL=Types.js.map

@@ -1,11 +1,14 @@
-import { SimpleRule } from './SimpleRule';
-import { RuleResult } from './RuleResult';
-import { compare } from './core/Compare';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Max = void 0;
+const SimpleRule_1 = require("./SimpleRule");
+const RuleResult_1 = require("./RuleResult");
+const Compare_1 = require("./core/Compare");
 /**
  * Use the [Max] rule to determine if the target value is equal to or less than
  * the comparison value.
  */
-export class Max extends SimpleRule {
+class Max extends SimpleRule_1.SimpleRule {
     /**
      * The constructor for the [Max] rule.
      * @param name The name of the rule.
@@ -24,11 +27,12 @@ export class Max extends SimpleRule {
      * returns a [RuleResult] with the evaluated result and rule information.
      */
     render() {
-        const compareResult = compare(this.target, this.comparison, true);
-        if (compareResult === 1 /* Greater */) {
+        const compareResult = (0, Compare_1.compare)(this.target, this.comparison, true);
+        if (compareResult === 1 /* CompareResult.Greater */) {
             this.isValid = false;
         }
-        return new RuleResult(this, this.target);
+        return new RuleResult_1.RuleResult(this, this.target);
     }
 }
+exports.Max = Max;
 //# sourceMappingURL=Max.js.map

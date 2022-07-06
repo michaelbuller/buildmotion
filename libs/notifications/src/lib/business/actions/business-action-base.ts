@@ -1,5 +1,4 @@
 import { ActionBase } from '@buildmotion/foundation';
-import { ILoggingService } from '@buildmotion/logging';
 import { BusinessProviderService } from './../business-provider.service';
 
 /**
@@ -11,8 +10,8 @@ export abstract class BusinessActionBase<T> extends ActionBase<T> {
   hideRuleMessages = false;
 
   businessProvider!: BusinessProviderService;
-  loggingService!: ILoggingService;
-  actionName: string;
+  // override loggingService!: ILoggingService;
+  // override actionName: string;
 
   constructor(actionName: string) {
     super();

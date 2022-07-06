@@ -1,0 +1,8 @@
+export var NotificationSeverity;
+(function (NotificationSeverity) {
+    NotificationSeverity["information"] = "information";
+    NotificationSeverity["warning"] = "warning";
+    NotificationSeverity["error"] = "error";
+    NotificationSeverity["success"] = "success";
+})(NotificationSeverity || (NotificationSeverity = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibm90aWZpY2F0aW9uLXNldmVyaXR5LmVudW0uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi9saWJzL25vdGlmaWNhdGlvbnMvc3JjL2xpYi9tb2RlbHMvbm90aWZpY2F0aW9uLXNldmVyaXR5LmVudW0udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsTUFBTSxDQUFOLElBQVksb0JBS1g7QUFMRCxXQUFZLG9CQUFvQjtJQUM5QixtREFBMkIsQ0FBQTtJQUMzQiwyQ0FBbUIsQ0FBQTtJQUNuQix1Q0FBZSxDQUFBO0lBQ2YsMkNBQW1CLENBQUE7QUFDckIsQ0FBQyxFQUxXLG9CQUFvQixLQUFwQixvQkFBb0IsUUFLL0IiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZW51bSBOb3RpZmljYXRpb25TZXZlcml0eSB7XG4gIGluZm9ybWF0aW9uID0gJ2luZm9ybWF0aW9uJyxcbiAgd2FybmluZyA9ICd3YXJuaW5nJyxcbiAgZXJyb3IgPSAnZXJyb3InLFxuICBzdWNjZXNzID0gJ3N1Y2Nlc3MnLFxufVxuIl19

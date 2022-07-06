@@ -1,1 +1,0 @@
-{"version":3,"file":"i-app-version-config.js","sourceRoot":"","sources":["../../../../../../libs/configuration/src/lib/config/i-app-version-config.ts"],"names":[],"mappings":"","sourcesContent":["import { AppEnvironment } from './app-environment.enum';\n\nexport interface IAppVersionConfig {\n  environment: AppEnvironment;\n  displayNotification: boolean;\n}\n"]}

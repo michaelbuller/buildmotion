@@ -1,5 +1,8 @@
-import { ValidationContext, ValidationContextState } from '@buildmotion/rules-engine';
-import { ActionResult } from './action-result';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Action = void 0;
+const rules_engine_1 = require("@buildmotion/rules-engine");
+const action_result_1 = require("./action-result");
 /**
  * This is the framework Action class that provides the pipeline of pre/post
  * execution methods. This class implements the [Template Method] pattern. Use
@@ -22,7 +25,7 @@ import { ActionResult } from './action-result';
  *		10. finish();
  */
 // export abstract class Action implements IAction {
-export class Action {
+class Action {
     constructor() {
         /**
          * Indicates if the action is allowed execution. If there are any rule
@@ -33,12 +36,12 @@ export class Action {
         /**
          * The validation context for the specified action instance.
          */
-        this._validationContext = new ValidationContext();
+        this._validationContext = new rules_engine_1.ValidationContext();
         /**
          * The result of the action. The default value is [Unknown], until the action
          * is executed.
          */
-        this.actionResult = ActionResult.Unknown;
+        this.actionResult = action_result_1.ActionResult.Unknown;
     }
     /**
      * Use to retrieve the [ValidationContext] for the specified action.
@@ -102,11 +105,11 @@ export class Action {
         const context = this.validateAction();
         if (context.isValid) {
             this.allowExecution = true;
-            this.validationContext.state = ValidationContextState.Success;
+            this.validationContext.state = rules_engine_1.ValidationContextState.Success;
         }
         else {
             this.allowExecution = false;
-            this.validationContext.state = ValidationContextState.Failure;
+            this.validationContext.state = rules_engine_1.ValidationContextState.Failure;
         }
     }
     /**
@@ -116,4 +119,5 @@ export class Action {
         return this.validationContext;
     }
 }
+exports.Action = Action;
 //# sourceMappingURL=Action.js.map

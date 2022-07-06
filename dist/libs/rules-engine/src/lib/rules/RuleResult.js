@@ -1,9 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RuleResult = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { RulePolicy } from './RulePolicy';
+const RulePolicy_1 = require("./RulePolicy");
 /**
  * This class defines the result of a single rule evaluation.
  */
-export class RuleResult {
+class RuleResult {
     /**
      * Constructor for the RuleResult class.
      * @param rulePolicy Use to specify the rule.
@@ -17,7 +20,7 @@ export class RuleResult {
         /**
          * The rule that was evaluated.
          */
-        this.rulePolicy = new RulePolicy('', '', false);
+        this.rulePolicy = new RulePolicy_1.RulePolicy('', '', false);
         /**
          * The rule message to use when the evaluation [isValid] is [false].
          */
@@ -30,4 +33,5 @@ export class RuleResult {
         this.target = target;
     }
 }
+exports.RuleResult = RuleResult;
 //# sourceMappingURL=RuleResult.js.map

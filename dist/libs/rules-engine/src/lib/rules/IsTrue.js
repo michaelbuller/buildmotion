@@ -1,9 +1,12 @@
-import { SimpleRule } from './SimpleRule';
-import { RuleResult } from './RuleResult';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IsTrue = void 0;
+const SimpleRule_1 = require("./SimpleRule");
+const RuleResult_1 = require("./RuleResult");
 /**
  * Use to determine if the target is truthy.
  */
-export class IsTrue extends SimpleRule {
+class IsTrue extends SimpleRule_1.SimpleRule {
     /**
      * The constructor for the [IsTrue] rule.
      * @param name The name of the rule.
@@ -25,7 +28,8 @@ export class IsTrue extends SimpleRule {
             //if(not true)-->false;
             this.isValid = false;
         }
-        return new RuleResult(this, this.target);
+        return new RuleResult_1.RuleResult(this, this.target);
     }
 }
+exports.IsTrue = IsTrue;
 //# sourceMappingURL=IsTrue.js.map

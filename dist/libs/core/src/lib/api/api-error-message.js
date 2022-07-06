@@ -1,6 +1,9 @@
-import { ApiMessage } from './api-message';
-import { ApiMessageType } from './api-message-type.enum';
-export class ApiErrorMessage extends ApiMessage {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiErrorMessage = void 0;
+const api_message_1 = require("./api-message");
+const api_message_type_enum_1 = require("./api-message-type.enum");
+class ApiErrorMessage extends api_message_1.ApiMessage {
     /**
      * Use to create a new [ApiErrorMessage].
      *
@@ -9,11 +12,12 @@ export class ApiErrorMessage extends ApiMessage {
      */
     constructor(message, code) {
         super();
-        this.messageType = ApiMessageType.Error;
+        this.messageType = api_message_type_enum_1.ApiMessageType.Error;
         this.message = message;
         if (code) {
             this.code = code;
         }
     }
 }
+exports.ApiErrorMessage = ApiErrorMessage;
 //# sourceMappingURL=api-error-message.js.map

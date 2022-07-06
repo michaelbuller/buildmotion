@@ -1,11 +1,14 @@
-import { CompositeRule } from './CompositeRule';
-import { StringIsNotNullEmptyRange } from './StringIsNotNullEmptyRange';
-import { StringIsRegExMatch } from './StringIsRegExMatch';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GuidIsValid = void 0;
+const CompositeRule_1 = require("./CompositeRule");
+const StringIsNotNullEmptyRange_1 = require("./StringIsNotNullEmptyRange");
+const StringIsRegExMatch_1 = require("./StringIsRegExMatch");
 /**
  * Use this rule to validate the target to determine if it is a valid
  * GUID value.
  */
-export class GuidIsValid extends CompositeRule {
+class GuidIsValid extends CompositeRule_1.CompositeRule {
     /**
      * Constructor for the [GuidIsValid] composite rule.
      * @param name Use to indicate the name of the rule.
@@ -26,10 +29,11 @@ export class GuidIsValid extends CompositeRule {
         const guidLength = 36; // Length with hyphens.
         const guidExpression = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i; // Guid RegExp (with hyphens)
         // determine if the target is a valid guid;
-        this.rules.push(new StringIsNotNullEmptyRange('GuidStringIsNotNullOrUndefined', 'The target value is null or undefined.', this.target, guidLength, guidLength, doNotShowRuleViolation));
+        this.rules.push(new StringIsNotNullEmptyRange_1.StringIsNotNullEmptyRange('GuidStringIsNotNullOrUndefined', 'The target value is null or undefined.', this.target, guidLength, guidLength, doNotShowRuleViolation));
         if (this.target) {
-            this.rules.push(new StringIsRegExMatch('GuidIsValid', 'The target value is not a valid guid.', this.target, guidExpression, doNotShowRuleViolation));
+            this.rules.push(new StringIsRegExMatch_1.StringIsRegExMatch('GuidIsValid', 'The target value is not a valid guid.', this.target, guidExpression, doNotShowRuleViolation));
         }
     }
 }
+exports.GuidIsValid = GuidIsValid;
 //# sourceMappingURL=GuidIsValid.js.map

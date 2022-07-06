@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionResult = void 0;
 /**
  * Use to indicate the result of the action (i.e., Success, Fail, or Unknown).
  */
-export var ActionResult;
+var ActionResult;
 (function (ActionResult) {
     /**
      * Use to indicate that the action's result is success.
@@ -15,5 +18,5 @@ export var ActionResult;
      * Use to indicate that the action's result is unknown.
      */
     ActionResult["Unknown"] = "Unknown";
-})(ActionResult || (ActionResult = {}));
+})(ActionResult = exports.ActionResult || (exports.ActionResult = {}));
 //# sourceMappingURL=action-result.js.map
