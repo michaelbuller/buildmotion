@@ -4,7 +4,7 @@ import { TestBed } from '@angular/core/testing';
 import { ActionResult } from '@buildmotion/actions';
 import { ServiceContext } from '@buildmotion/foundation';
 import { LoggingService, LoggingServiceMock } from '@buildmotion/logging';
-import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/types';
+import { ApiMessage, ApiMessageType, ApiResponse } from '@buildmotion/core';
 import { ValidateApiResponseAction } from './validate-api-response-action';
 
 describe('ValidateFormMessageAction', () => {

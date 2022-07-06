@@ -1,0 +1,47 @@
+{
+  "name": "@buildmotion/configuration",
+  "version": "12.2.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion",
+    "directory": "libs/configuration"
+  },
+  "keywords": [
+    "actions",
+    "angular-rules-engine",
+    "Angular",
+    "angular configuration",
+    "angularlicio.us",
+    "angularlicious",
+    "build motion",
+    "buildmotion",
+    "buildmotion",
+    "business actions",
+    "configuration",
+    "framework",
+    "JSON rules engine",
+    "JavaScript rules engine",
+    "Matt Vaughn",
+    "rules engine",
+    "rules-engine",
+    "TypeScript Rules Engine"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT",
+  "main": "bundles/buildmotion-configuration.umd.js",
+  "typings": "buildmotion-configuration.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "rxjs": "~6.6.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/buildmotion-configuration.js",
+  "es2015": "fesm2015/buildmotion-configuration.js",
+  "esm2015": "esm2015/buildmotion-configuration.js",
+  "fesm2015": "fesm2015/buildmotion-configuration.js",
+  "sideEffects": false
+}

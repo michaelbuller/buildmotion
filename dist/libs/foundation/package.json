@@ -1,0 +1,55 @@
+{
+  "name": "@buildmotion/foundation",
+  "version": "12.2.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion",
+    "directory": "libs/foundation"
+  },
+  "keywords": [
+    "actions",
+    "angular-rules-engine",
+    "Angular",
+    "angularlicio.us",
+    "angularlicious",
+    "build motion",
+    "buildmotion",
+    "buildmotion",
+    "business actions",
+    "framework",
+    "JSON rules engine",
+    "JavaScript rules engine",
+    "Matt Vaughn",
+    "rules engine",
+    "rules-engine",
+    "TypeScript Rules Engine"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT",
+  "main": "bundles/buildmotion-foundation.umd.js",
+  "typings": "buildmotion-foundation.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@buildmotion/actions": "12.2.0",
+    "@buildmotion/rules-engine": "12.2.0",
+    "@buildmotion/core": "12.2.0",
+    "@buildmotion/logging": "12.2.0",
+    "rxjs": "~6.6.0",
+    "@buildmotion/configuration": "12.2.0",
+    "@datadog/browser-logs": "^4.3.0",
+    "@datadog/browser-rum": "^4.3.0",
+    "guid-typescript": "^1.0.9",
+    "@angular/forms": "^12.2.0",
+    "@angular/router": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/buildmotion-foundation.js",
+  "es2015": "fesm2015/buildmotion-foundation.js",
+  "esm2015": "esm2015/buildmotion-foundation.js",
+  "fesm2015": "fesm2015/buildmotion-foundation.js",
+  "sideEffects": false
+}

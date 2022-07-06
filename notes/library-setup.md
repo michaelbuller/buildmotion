@@ -16,7 +16,7 @@ yarn add guid-typescript -S
 ```ts
 nx g @nrwl/workspace:library rules-engine   --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/rules-engine
 nx g @nrwl/workspace:library actions        --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/actions
-nx g @nrwl/workspace:library types          --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/types
+nx g @nrwl/workspace:library core          --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/core
 
 nx g @nrwl/angular:library configuration    --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/configuration
 nx g @nrwl/angular:library logging          --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/logging

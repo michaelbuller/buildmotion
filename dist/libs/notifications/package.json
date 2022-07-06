@@ -1,0 +1,59 @@
+{
+  "name": "@buildmotion/notifications",
+  "version": "12.2.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buildmotion/buildmotion",
+    "directory": "libs/notifications"
+  },
+  "keywords": [
+    "actions",
+    "angular notifications",
+    "angular-rules-engine",
+    "Angular",
+    "angularlicio.us",
+    "angularlicious",
+    "build motion",
+    "buildmotion",
+    "buildmotion",
+    "business actions",
+    "framework",
+    "JavaScript rules engine",
+    "JSON rules engine",
+    "Matt Vaughn",
+    "notification service",
+    "rules engine",
+    "rules-engine",
+    "TypeScript Notifications Service",
+    "TypeScript Rules Engine"
+  ],
+  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
+  "license": "MIT",
+  "main": "bundles/buildmotion-notifications.umd.js",
+  "typings": "buildmotion-notifications.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^12.2.0",
+    "@angular/core": "^12.2.0",
+    "@buildmotion/foundation": "12.2.0",
+    "@buildmotion/actions": "12.2.0",
+    "@buildmotion/rules-engine": "12.2.0",
+    "@buildmotion/core": "12.2.0",
+    "@buildmotion/logging": "12.2.0",
+    "rxjs": "~6.6.0",
+    "@buildmotion/configuration": "12.2.0",
+    "@datadog/browser-logs": "^4.3.0",
+    "@datadog/browser-rum": "^4.3.0",
+    "guid-typescript": "^1.0.9",
+    "@angular/forms": "^12.2.0",
+    "@angular/router": "^12.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/buildmotion-notifications.js",
+  "es2015": "fesm2015/buildmotion-notifications.js",
+  "esm2015": "esm2015/buildmotion-notifications.js",
+  "fesm2015": "fesm2015/buildmotion-notifications.js",
+  "sideEffects": false
+}

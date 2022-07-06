@@ -36,6 +36,9 @@
     "configuration": {
       "tags": []
     },
+    "core": {
+      "tags": []
+    },
     "error-handling": {
       "tags": []
     },

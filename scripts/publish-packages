@@ -1,0 +1,13 @@
+echo 'update package...versions'
+
+cd dist/libs/core && npm publish --access public
+cd dist/libs/rules-engine && npm publish --access public
+cd dist/libs/actions && npm publish
+cd dist/libs/configuration  && npm publish
+cd dist/libs/logging  && npm publish
+cd dist/libs/foundation  && npm publish
+cd dist/libs/common  && npm publish
+cd dist/libs/error-handling && npm publish --access public
+cd dist/libs/http-service && npm publish --access public
+cd dist/libs/notifications  && npm publish
+cd dist/libs/validation  && npm publish --access public

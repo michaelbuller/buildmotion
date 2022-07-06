@@ -1,0 +1,5 @@
+/**
+ * Generated bundle index. Do not edit.
+ */
+/// <amd-module name="@buildmotion/logging" />
+export * from './index';
