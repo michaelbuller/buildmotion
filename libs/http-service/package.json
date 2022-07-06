@@ -1,40 +1,9 @@
 {
   "name": "@buildmotion/http-service",
-  "version": "13.0.1",,
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/http-service"
-  },
-  "keywords": [
-    "actions",
-    "angular-rules-engine",
-    "Angular",
-    "angular http service",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "framework",
-    "HTTPClient",
-    "HTTP service",
-    "JSON rules engine",
-    "JavaScript rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "main": "./src/index.js",
-  "typings": "./src/index.d.ts",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -1,55 +1,36 @@
 {
   "name": "@buildmotion/foundation",
-  "version": "12.2.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/foundation"
-  },
-  "keywords": [
-    "actions",
-    "angular-rules-engine",
-    "Angular",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "framework",
-    "JSON rules engine",
-    "JavaScript rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "main": "bundles/buildmotion-foundation.umd.js",
-  "typings": "buildmotion-foundation.d.ts",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0",
-    "@buildmotion/actions": "12.2.0",
-    "@buildmotion/rules-engine": "12.2.0",
-    "@buildmotion/core": "12.2.0",
-    "@buildmotion/logging": "12.2.0",
-    "rxjs": "~6.6.0",
-    "@buildmotion/configuration": "12.2.0",
-    "@datadog/browser-logs": "^4.3.0",
-    "@datadog/browser-rum": "^4.3.0",
-    "guid-typescript": "^1.0.9",
-    "@angular/forms": "^12.2.0",
-    "@angular/router": "^12.2.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@buildmotion/actions": "14.0.1",
+    "@buildmotion/core": "14.0.1",
+    "@buildmotion/logging": "14.0.1",
+    "@angular/forms": "~14.0.0",
+    "@angular/router": "~14.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "module": "fesm2015/buildmotion-foundation.js",
-  "es2015": "fesm2015/buildmotion-foundation.js",
-  "esm2015": "esm2015/buildmotion-foundation.js",
-  "fesm2015": "fesm2015/buildmotion-foundation.js",
+  "module": "fesm2015/buildmotion-foundation.mjs",
+  "es2020": "fesm2020/buildmotion-foundation.mjs",
+  "esm2020": "esm2020/buildmotion-foundation.mjs",
+  "fesm2020": "fesm2020/buildmotion-foundation.mjs",
+  "fesm2015": "fesm2015/buildmotion-foundation.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/buildmotion-foundation.mjs",
+      "es2020": "./fesm2020/buildmotion-foundation.mjs",
+      "es2015": "./fesm2015/buildmotion-foundation.mjs",
+      "node": "./fesm2015/buildmotion-foundation.mjs",
+      "default": "./fesm2020/buildmotion-foundation.mjs"
+    }
+  },
   "sideEffects": false
 }

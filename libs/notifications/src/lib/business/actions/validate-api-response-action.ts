@@ -10,7 +10,7 @@ export class ValidateApiResponseAction<T> extends BusinessActionBase<T> {
     super('ValidateApiResponseAction');
   }
 
-  preValidateAction() {
+  override preValidateAction() {
     this.loggingService.log(this.actionName, Severity.Information, `Preparing to validate the API response for error messages.`);
     this.validationContext.addRule(new IsNotNullOrUndefined('ApiResponseIsValid', 'The API response cannot be null or undefined.', this.apiResponse, false));
 
@@ -43,7 +43,7 @@ export class ValidateApiResponseAction<T> extends BusinessActionBase<T> {
     }
   }
 
-  performAction() {
+  override performAction() {
     this.actionResult = ActionResult.Success;
     const result: any = this.apiResponse.messages;
     const successApiMessage = new ApiResponse<T>();

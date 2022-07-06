@@ -1,7 +1,8 @@
 {
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "buildmotion",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
   "implicitDependencies": {
     "package.json": {
@@ -12,56 +13,30 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
   },
-  "projects": {
-    "actions": {
-      "tags": []
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "none"
     },
-    "common": {
-      "tags": []
+    "@nrwl/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "jest"
     },
-    "configuration": {
-      "tags": []
-    },
-    "core": {
-      "tags": []
-    },
-    "error-handling": {
-      "tags": []
-    },
-    "foundation": {
-      "tags": []
-    },
-    "http-service": {
-      "tags": []
-    },
-    "logging": {
-      "tags": []
-    },
-    "notifications": {
-      "tags": []
-    },
-    "rules-engine": {
-      "tags": []
-    },
-    "types": {
-      "tags": []
-    },
-    "validation": {
-      "tags": []
+    "@nrwl/angular:component": {
+      "style": "css"
     }
   }
 }

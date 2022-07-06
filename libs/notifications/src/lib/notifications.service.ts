@@ -21,12 +21,12 @@ import { NotifierType } from './models/notifier-type.enum';
 export class NotificationService extends ServiceBase {
   private addApiResponseSubscription!: Subscription;
   private addMessageSubscription!: Subscription;
-  private apiMessagesSubject: ReplaySubject<ApiMessage[]> = new ReplaySubject<ApiMessage[]>(1);
-  private notificationsSubject$: ReplaySubject<Notification> = new ReplaySubject<Notification>(1);
+  private apiMessagesSubject: ReplaySubject<ApiMessage[] | null> = new ReplaySubject<ApiMessage[] | null>(1);
+  private notificationsSubject$: ReplaySubject<Notification | null> = new ReplaySubject<Notification | null>(1);
   private browserNotificationSubject$: ReplaySubject<boolean> = new ReplaySubject<boolean>();
 
-  public readonly apiMessages$: Observable<ApiMessage[]> = this.apiMessagesSubject.asObservable();
-  public readonly notifications$: Observable<Notification> = this.notificationsSubject$.asObservable();
+  public readonly apiMessages$: Observable<ApiMessage[] | null> = this.apiMessagesSubject.asObservable();
+  public readonly notifications$: Observable<Notification | null> = this.notificationsSubject$.asObservable();
   public readonly browserNotification$: Observable<boolean> = this.browserNotificationSubject$.asObservable();
 
   constructor(logger: LoggingService, @Optional() serviceContext: ServiceContext, private businessProvider: BusinessProviderService) {
@@ -61,8 +61,8 @@ export class NotificationService extends ServiceBase {
    * Use to reset the notification service - removes all messages.
    */
   reset() {
-    this.notificationsSubject$.next(undefined);
-    this.apiMessagesSubject.next(undefined);
+    this.notificationsSubject$.next(null);
+    this.apiMessagesSubject.next(null);
   }
 
   /**

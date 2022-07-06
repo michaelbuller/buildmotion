@@ -1,1 +1,0 @@
-{"version":3,"file":"i-log-entry.js","sourceRoot":"","sources":["../../../../../libs/logging/src/lib/i-log-entry.ts"],"names":[],"mappings":"","sourcesContent":["import { Severity } from './severity.enum';\n\nexport interface ILogEntry {\n  source: string;\n  application: string;\n  severity: Severity;\n  message: string;\n  timestamp: Date;\n  tags?: string[];\n}\n"]}

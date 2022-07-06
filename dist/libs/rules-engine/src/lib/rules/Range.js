@@ -1,7 +1,10 @@
-import { CompositeRule } from './CompositeRule';
-import { IsNotNullOrUndefined } from './IsNotNullOrUndefined';
-import { Max } from './Max';
-import { Min } from './Min';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Range = void 0;
+const CompositeRule_1 = require("./CompositeRule");
+const IsNotNullOrUndefined_1 = require("./IsNotNullOrUndefined");
+const Max_1 = require("./Max");
+const Min_1 = require("./Min");
 /**
  * Use this rule to determine if the specified target is within the specified range (start and end) values.
  *
@@ -12,7 +15,7 @@ import { Min } from './Min';
  * Ex: 0 is not within 1 and 3. The target is not valid.
  * Ex: 4 is not within 1 and 3. The target is not valid.
  */
-export class Range extends CompositeRule {
+class Range extends CompositeRule_1.CompositeRule {
     /**
      * Constructor for the [Range] rule.
      * @param name The name of the rule.
@@ -28,11 +31,12 @@ export class Range extends CompositeRule {
         this.start = start;
         this.end = end;
         this.isDisplayable = isDisplayable;
-        this.rules.push(new IsNotNullOrUndefined('TargetIsNotNull', 'The target is null or undefined.', this.target));
+        this.rules.push(new IsNotNullOrUndefined_1.IsNotNullOrUndefined('TargetIsNotNull', 'The target is null or undefined.', this.target));
         if (this.target != null) {
-            this.rules.push(new Min('MinValue', 'The value must be equal to or greater than the start range value.', this.target, this.start));
-            this.rules.push(new Max('MaxValue', 'The value must be equal to or less than the end range value.', this.target, this.end));
+            this.rules.push(new Min_1.Min('MinValue', 'The value must be equal to or greater than the start range value.', this.target, this.start));
+            this.rules.push(new Max_1.Max('MaxValue', 'The value must be equal to or less than the end range value.', this.target, this.end));
         }
     }
 }
+exports.Range = Range;
 //# sourceMappingURL=Range.js.map

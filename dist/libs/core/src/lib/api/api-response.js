@@ -1,4 +1,7 @@
-export class ApiResponse {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApiResponse = void 0;
+class ApiResponse {
     constructor() {
         /** A boolean indicator of success for the response. */
         this.isSuccess = false;
@@ -16,4 +19,5 @@ export class ApiResponse {
         this.timestamp = new Date();
     }
 }
+exports.ApiResponse = ApiResponse;
 //# sourceMappingURL=api-response.js.map

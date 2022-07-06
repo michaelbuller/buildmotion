@@ -1,6 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.areEquivalent = exports.compare = exports.areEqual = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Type } from "./Types";
-var isTrueNaN = Type.isTrueNaN;
+const Types_1 = require("./Types");
+var isTrueNaN = Types_1.Type.isTrueNaN;
 const VOID0 = void 0;
 /**
  * Used for special comparison including NaN.
@@ -9,26 +12,28 @@ const VOID0 = void 0;
  * @param strict
  * @returns {boolean|any}
  */
-export function areEqual(a, b, strict = true) {
+function areEqual(a, b, strict = true) {
     return a === b
         || !strict && a == b
         || isTrueNaN(a) && isTrueNaN(b);
 }
+exports.areEqual = areEqual;
 const COMPARE_TO = "compareTo";
-export function compare(a, b, strict = true) {
+function compare(a, b, strict = true) {
     if (areEqual(a, b, strict))
-        return 0 /* Equal */;
-    if (a && Type.hasMember(a, COMPARE_TO))
+        return 0 /* CompareResult.Equal */;
+    if (a && Types_1.Type.hasMember(a, COMPARE_TO))
         return a.compareTo(b); // If a has compareTo, use it.
-    else if (b && Type.hasMember(b, COMPARE_TO))
+    else if (b && Types_1.Type.hasMember(b, COMPARE_TO))
         return -b.compareTo(a); // a doesn't have compareTo? check if b does and invert.
     // Allow for special inequality..
     if (a > b || strict && (a === 0 && b == 0 || a === null && b === VOID0))
-        return 1 /* Greater */;
+        return 1 /* CompareResult.Greater */;
     if (b > a || strict && (b === 0 && a == 0 || b === null && a === VOID0))
-        return -1 /* Less */;
+        return -1 /* CompareResult.Less */;
     return NaN;
 }
+exports.compare = compare;
 /**
  * Determines if two primitives are equal or if two objects have the same key/value combinations.
  * @param a
@@ -37,22 +42,22 @@ export function compare(a, b, strict = true) {
  * @param extraDepth
  * @returns {boolean}
  */
-export function areEquivalent(a, b, nullEquivalency = true, extraDepth = 0) {
+function areEquivalent(a, b, nullEquivalency = true, extraDepth = 0) {
     // Take a step by step approach to ensure efficiency.
     if (areEqual(a, b, true))
         return true;
     if (a == null || b == null) {
         if (!nullEquivalency)
             return false;
-        if (Type.isObject(a)) {
+        if (Types_1.Type.isObject(a)) {
             return !Object.keys(a).length;
         }
-        if (Type.isObject(b)) {
+        if (Types_1.Type.isObject(b)) {
             return !Object.keys(b).length;
         }
         return a == null && b == null;
     }
-    if (Type.isObject(a) && Type.isObject(b)) {
+    if (Types_1.Type.isObject(a) && Types_1.Type.isObject(b)) {
         const aKeys = Object.keys(a), bKeys = Object.keys(b), len = aKeys.length;
         if (len != bKeys.length)
             return false;
@@ -74,4 +79,5 @@ export function areEquivalent(a, b, nullEquivalency = true, extraDepth = 0) {
     }
     return false;
 }
+exports.areEquivalent = areEquivalent;
 //# sourceMappingURL=Compare.js.map

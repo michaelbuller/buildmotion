@@ -25,7 +25,7 @@ export class ValidateNotificationAction<T> extends BusinessActionBase<T> {
    *
    * This method runs before [validationAction] and [performAction].
    */
-  preValidateAction() {
+  override preValidateAction() {
     this.validationContext
       .addRule(new IsNotNullOrUndefined('FormMessageIsNotNull', 'The form message cannot be null or undefined.', this.notification, this.doNotDisplayToUser))
       .addRule(
@@ -63,7 +63,7 @@ export class ValidateNotificationAction<T> extends BusinessActionBase<T> {
    *
    * Wraps the response in an ApiResponse to return the value using the action's [response] property.
    */
-  performAction() {
+  override performAction() {
     this.actionResult = ActionResult.Success;
     const data: unknown = this.notification;
     const successApiMessage = new ApiResponse<T>();

@@ -7,5 +7,5 @@ export declare class DigitOnlyDirective {
     constructor(el: ElementRef);
     onKeyDown(e: any): void;
     static ɵfac: i0.ɵɵFactoryDeclaration<DigitOnlyDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<DigitOnlyDirective, "[buildmotionDigitalOnly]", never, {}, {}, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DigitOnlyDirective, "[buildmotionDigitalOnly]", never, {}, {}, never, never, false>;
 }

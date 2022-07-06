@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Severity = void 0;
 /**
  * Use to indicate the severity if the rule is violated.
  */
-export var Severity;
+var Severity;
 (function (Severity) {
     /**
      * Indicates the rule violation is an [Exception].
@@ -15,5 +18,5 @@ export var Severity;
      * Indicates the rule violation is an [Information].
      */
     Severity["Information"] = "Information";
-})(Severity || (Severity = {}));
+})(Severity = exports.Severity || (exports.Severity = {}));
 //# sourceMappingURL=Severity.js.map

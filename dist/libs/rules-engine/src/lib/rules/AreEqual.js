@@ -1,10 +1,13 @@
-import { compare } from './core/Compare';
-import { RuleResult } from './RuleResult';
-import { SimpleRule } from './SimpleRule';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AreEqual = void 0;
+const Compare_1 = require("./core/Compare");
+const RuleResult_1 = require("./RuleResult");
+const SimpleRule_1 = require("./SimpleRule");
 /**
  * Use to determine if the target is equal to the comparison target.
  */
-export class AreEqual extends SimpleRule {
+class AreEqual extends SimpleRule_1.SimpleRule {
     /**
      * The constructor for the [AreEqualRule] rule.
      * @param name The name of the rule.
@@ -23,10 +26,11 @@ export class AreEqual extends SimpleRule {
      * returns a [RuleResult] with the evaluated result and rule information.
      */
     render() {
-        if (compare(this.target, this.comparison, true) !== 0 /* Equal */) {
+        if ((0, Compare_1.compare)(this.target, this.comparison, true) !== 0 /* CompareResult.Equal */) {
             this.isValid = false;
         }
-        return new RuleResult(this, this.target);
+        return new RuleResult_1.RuleResult(this, this.target);
     }
 }
+exports.AreEqual = AreEqual;
 //# sourceMappingURL=AreEqual.js.map

@@ -1,5 +1,8 @@
-import { RulePolicy } from './RulePolicy';
-import { RuleResult } from './RuleResult';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompositeRule = void 0;
+const RulePolicy_1 = require("./RulePolicy");
+const RuleResult_1 = require("./RuleResult");
 /**
  * Use the [CompositeRule] as a base class for a complex rule - a rule that contains
  * other rules.
@@ -12,7 +15,7 @@ import { RuleResult } from './RuleResult';
  * A [SimpleRule]    --> [RulePolicy]
  * - does NOT have a list of rules; it is the [leaf] of the "composite" pattern.
  */
-export class CompositeRule extends RulePolicy {
+class CompositeRule extends RulePolicy_1.RulePolicy {
     /**
      *
      * @param name The name of the rule.
@@ -64,7 +67,8 @@ export class CompositeRule extends RulePolicy {
             this.isValid = false;
             this.hasErrors = true;
         }
-        return new RuleResult(this);
+        return new RuleResult_1.RuleResult(this);
     }
 }
+exports.CompositeRule = CompositeRule;
 //# sourceMappingURL=CompositeRule.js.map

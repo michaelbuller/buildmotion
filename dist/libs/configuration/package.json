@@ -1,47 +1,32 @@
 {
   "name": "@buildmotion/configuration",
-  "version": "12.2.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildmotion/buildmotion",
-    "directory": "libs/configuration"
-  },
-  "keywords": [
-    "actions",
-    "angular-rules-engine",
-    "Angular",
-    "angular configuration",
-    "angularlicio.us",
-    "angularlicious",
-    "build motion",
-    "buildmotion",
-    "buildmotion",
-    "business actions",
-    "configuration",
-    "framework",
-    "JSON rules engine",
-    "JavaScript rules engine",
-    "Matt Vaughn",
-    "rules engine",
-    "rules-engine",
-    "TypeScript Rules Engine"
-  ],
-  "author": "matt.vaughn@buildmotion.com www.buildmotion.com",
-  "license": "MIT",
-  "main": "bundles/buildmotion-configuration.umd.js",
-  "typings": "buildmotion-configuration.d.ts",
+  "version": "14.0.1",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0",
-    "rxjs": "~6.6.0"
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "rxjs": "~7.4.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "module": "fesm2015/buildmotion-configuration.js",
-  "es2015": "fesm2015/buildmotion-configuration.js",
-  "esm2015": "esm2015/buildmotion-configuration.js",
-  "fesm2015": "fesm2015/buildmotion-configuration.js",
+  "module": "fesm2015/buildmotion-configuration.mjs",
+  "es2020": "fesm2020/buildmotion-configuration.mjs",
+  "esm2020": "esm2020/buildmotion-configuration.mjs",
+  "fesm2020": "fesm2020/buildmotion-configuration.mjs",
+  "fesm2015": "fesm2015/buildmotion-configuration.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/buildmotion-configuration.mjs",
+      "es2020": "./fesm2020/buildmotion-configuration.mjs",
+      "es2015": "./fesm2015/buildmotion-configuration.mjs",
+      "node": "./fesm2015/buildmotion-configuration.mjs",
+      "default": "./fesm2020/buildmotion-configuration.mjs"
+    }
+  },
   "sideEffects": false
 }

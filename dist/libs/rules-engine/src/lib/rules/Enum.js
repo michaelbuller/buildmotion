@@ -1,9 +1,12 @@
-import { RuleResult } from './RuleResult';
-import { SimpleRule } from './SimpleRule';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Enum = void 0;
+const RuleResult_1 = require("./RuleResult");
+const SimpleRule_1 = require("./SimpleRule");
 /**
  * Use to determine if the target is equal to the comparison target.
  */
-export class Enum extends SimpleRule {
+class Enum extends SimpleRule_1.SimpleRule {
     /**
      * The constructor for the [AreEqualRule] rule.
      * @param name The name of the rule.
@@ -25,7 +28,8 @@ export class Enum extends SimpleRule {
         if (!this.comparison.includes(this.target)) {
             this.isValid = false;
         }
-        return new RuleResult(this, this.target);
+        return new RuleResult_1.RuleResult(this, this.target);
     }
 }
+exports.Enum = Enum;
 //# sourceMappingURL=Enum.js.map

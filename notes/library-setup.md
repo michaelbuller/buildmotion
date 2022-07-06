@@ -5,7 +5,8 @@
 Install the following packages.
 
 ```ts
-yarn add @nrwl/angular@12.10.1 -S
+yarn add @nrwl/angular@14.3.6 -S
+yarn add @nrwl/node@14.3.6 -S
 yarn add @datadog/browser-logs -S
 yarn add @datadog/browser-rum -S
 yarn add guid-typescript -S
@@ -14,9 +15,9 @@ yarn add guid-typescript -S
 ## Add Library Projects
 
 ```ts
-nx g @nrwl/workspace:library rules-engine   --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/rules-engine
-nx g @nrwl/workspace:library actions        --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/actions
-nx g @nrwl/workspace:library core          --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/core
+nx g @nrwl/node:library rules-engine   --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/rules-engine
+nx g @nrwl/node:library actions        --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/actions
+nx g @nrwl/node:library core           --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/core
 
 nx g @nrwl/angular:library configuration    --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/configuration
 nx g @nrwl/angular:library logging          --simpleModuleName --buildable --publishable --linter=eslint --importPath=@buildmotion/logging
@@ -51,3 +52,15 @@ cp -R ./foundation/src ../../../../github/buildmotion/libs/foundation
 cp -R ./validation/src ../../../../github/buildmotion/libs/validation
 cp -R ./notifications/src ../../../../github/buildmotion/libs/notifications
 ```
+
+cp -R ./actions/src ../../../temp/buildmotion/libs/actions
+cp -R ./rules-engine/src ../../../temp/buildmotion/libs/rules-engine
+cp -R ./core/src ../../../temp/buildmotion/libs/core
+cp -R ./configuration/src ../../../temp/buildmotion/libs/configuration
+cp -R ./logging/src ../../../temp/buildmotion/libs/logging
+cp -R ./error-handling/src ../../../temp/buildmotion/libs/error-handling
+cp -R ./common/src ../../../temp/buildmotion/libs/common
+cp -R ./http-service/src ../../../temp/buildmotion/libs/http-service
+cp -R ./foundation/src ../../../temp/buildmotion/libs/foundation
+cp -R ./validation/src ../../../temp/buildmotion/libs/validation
+cp -R ./notifications/src ../../../temp/buildmotion/libs/notifications

@@ -1,1 +1,0 @@
-{"version":3,"file":"configuration-context.js","sourceRoot":"","sources":["../../../../../libs/configuration/src/lib/configuration-context.ts"],"names":[],"mappings":"AAEA,MAAM,OAAO,oBAAoB;CAEhC","sourcesContent":["import { IConfiguration } from './i-configuration';\n\nexport class ConfigurationContext {\n  config!: IConfiguration;\n}\n"]}

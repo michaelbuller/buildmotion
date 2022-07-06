@@ -1,0 +1,28 @@
+import { ActionBase } from '@buildmotion/foundation';
+/**
+ * A helper class to provide the action with required dependencies and
+ * starting the execution of the action life-cycle pipeline.
+ */
+export class BusinessActionBase extends ActionBase {
+    // override loggingService!: ILoggingService;
+    // override actionName: string;
+    constructor(actionName) {
+        super();
+        this.showRuleMessages = true;
+        this.hideRuleMessages = false;
+        this.actionName = actionName;
+    }
+    /**
+     * Use the [Do] method to perform the action. Also uses [inversion of control]
+     * and provides the action the same instance of the [service context] and
+     * [logging service].
+     */
+    Do(businessProvider) {
+        this.businessProvider = businessProvider;
+        this.serviceContext = businessProvider.serviceContext;
+        this.loggingService = businessProvider.loggingService;
+        this.execute();
+        return this.response;
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVzaW5lc3MtYWN0aW9uLWJhc2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi8uLi8uLi9saWJzL25vdGlmaWNhdGlvbnMvc3JjL2xpYi9idXNpbmVzcy9hY3Rpb25zL2J1c2luZXNzLWFjdGlvbi1iYXNlLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLE9BQU8sRUFBRSxVQUFVLEVBQUUsTUFBTSx5QkFBeUIsQ0FBQztBQUdyRDs7O0dBR0c7QUFDSCxNQUFNLE9BQWdCLGtCQUFzQixTQUFRLFVBQWE7SUFLL0QsNkNBQTZDO0lBQzdDLCtCQUErQjtJQUUvQixZQUFZLFVBQWtCO1FBQzVCLEtBQUssRUFBRSxDQUFDO1FBUlYscUJBQWdCLEdBQUcsSUFBSSxDQUFDO1FBQ3hCLHFCQUFnQixHQUFHLEtBQUssQ0FBQztRQVF2QixJQUFJLENBQUMsVUFBVSxHQUFHLFVBQVUsQ0FBQztJQUMvQixDQUFDO0lBRUQ7Ozs7T0FJRztJQUNILEVBQUUsQ0FBQyxnQkFBeUM7UUFDMUMsSUFBSSxDQUFDLGdCQUFnQixHQUFHLGdCQUFnQixDQUFDO1FBQ3pDLElBQUksQ0FBQyxjQUFjLEdBQUcsZ0JBQWdCLENBQUMsY0FBYyxDQUFDO1FBQ3RELElBQUksQ0FBQyxjQUFjLEdBQUcsZ0JBQWdCLENBQUMsY0FBYyxDQUFDO1FBRXRELElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztRQUNmLE9BQU8sSUFBSSxDQUFDLFFBQVEsQ0FBQztJQUN2QixDQUFDO0NBQ0YiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBBY3Rpb25CYXNlIH0gZnJvbSAnQGJ1aWxkbW90aW9uL2ZvdW5kYXRpb24nO1xuaW1wb3J0IHsgQnVzaW5lc3NQcm92aWRlclNlcnZpY2UgfSBmcm9tICcuLy4uL2J1c2luZXNzLXByb3ZpZGVyLnNlcnZpY2UnO1xuXG4vKipcbiAqIEEgaGVscGVyIGNsYXNzIHRvIHByb3ZpZGUgdGhlIGFjdGlvbiB3aXRoIHJlcXVpcmVkIGRlcGVuZGVuY2llcyBhbmRcbiAqIHN0YXJ0aW5nIHRoZSBleGVjdXRpb24gb2YgdGhlIGFjdGlvbiBsaWZlLWN5Y2xlIHBpcGVsaW5lLlxuICovXG5leHBvcnQgYWJzdHJhY3QgY2xhc3MgQnVzaW5lc3NBY3Rpb25CYXNlPFQ+IGV4dGVuZHMgQWN0aW9uQmFzZTxUPiB7XG4gIHNob3dSdWxlTWVzc2FnZXMgPSB0cnVlO1xuICBoaWRlUnVsZU1lc3NhZ2VzID0gZmFsc2U7XG5cbiAgYnVzaW5lc3NQcm92aWRlciE6IEJ1c2luZXNzUHJvdmlkZXJTZXJ2aWNlO1xuICAvLyBvdmVycmlkZSBsb2dnaW5nU2VydmljZSE6IElMb2dnaW5nU2VydmljZTtcbiAgLy8gb3ZlcnJpZGUgYWN0aW9uTmFtZTogc3RyaW5nO1xuXG4gIGNvbnN0cnVjdG9yKGFjdGlvbk5hbWU6IHN0cmluZykge1xuICAgIHN1cGVyKCk7XG4gICAgdGhpcy5hY3Rpb25OYW1lID0gYWN0aW9uTmFtZTtcbiAgfVxuXG4gIC8qKlxuICAgKiBVc2UgdGhlIFtEb10gbWV0aG9kIHRvIHBlcmZvcm0gdGhlIGFjdGlvbi4gQWxzbyB1c2VzIFtpbnZlcnNpb24gb2YgY29udHJvbF1cbiAgICogYW5kIHByb3ZpZGVzIHRoZSBhY3Rpb24gdGhlIHNhbWUgaW5zdGFuY2Ugb2YgdGhlIFtzZXJ2aWNlIGNvbnRleHRdIGFuZFxuICAgKiBbbG9nZ2luZyBzZXJ2aWNlXS5cbiAgICovXG4gIERvKGJ1c2luZXNzUHJvdmlkZXI6IEJ1c2luZXNzUHJvdmlkZXJTZXJ2aWNlKSB7XG4gICAgdGhpcy5idXNpbmVzc1Byb3ZpZGVyID0gYnVzaW5lc3NQcm92aWRlcjtcbiAgICB0aGlzLnNlcnZpY2VDb250ZXh0ID0gYnVzaW5lc3NQcm92aWRlci5zZXJ2aWNlQ29udGV4dDtcbiAgICB0aGlzLmxvZ2dpbmdTZXJ2aWNlID0gYnVzaW5lc3NQcm92aWRlci5sb2dnaW5nU2VydmljZTtcblxuICAgIHRoaXMuZXhlY3V0ZSgpO1xuICAgIHJldHVybiB0aGlzLnJlc3BvbnNlO1xuICB9XG59XG4iXX0=
